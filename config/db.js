@@ -8,7 +8,7 @@ async function connectDatabase() {
         await db.sequelize.sync({ alter: true });
         console.log('😘 Database synchronized successfully.');
 
-    } catch (error) {
+    } catch (err) {
         console.error('Unexpected error during database connection:', err.message);
         process.exit(1);
     }   
